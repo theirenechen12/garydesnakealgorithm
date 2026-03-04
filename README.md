@@ -2,7 +2,7 @@
 The Gary De’Snake Algorithm (GDSA) is an algorithm that I developed, which deterministically classifies a person’s gender using various elements. It handles missing and conflicting data through decision rules
 
 # Origin
-Gary De'Snake is a pit viper and the tritagonist of *Zootopia 2*, which was released on November 26, 2025. She is a 10-meter-long blue-scaled pit viper (Trimeresurus insularis), and in real life, these can be found in eastern Java and the Lesser Sunda Islands. While the pit viper is often seen as poisonous, her role as one of the heroines of *Zootopia 2* defies those stereotypes.
+Gary De'Snake is a pit viper and the tritagonist of *Zootopia 2*, which was released on November 26, 2025. She is a 10-meter-long blue-scaled pit viper (*Trimeresurus insularis*), and in real life, these can be found in eastern Java and the Lesser Sunda Islands. While the pit viper is often seen as poisonous, her role as one of the heroines of *Zootopia 2* defies those stereotypes.
 
 Ever since *Zootopia 2* came out, Gary has been rising in popularity, especially in Asian countries like China and Vietnam. While many claim that Gary is a male character and she is referred to with male pronouns throughout the film, there is proof that she is actually, in fact, a girl. 
 1. Gary uses an autoinjector filled with antivenom in case her venomous fangs accidentally stab someone, known as the Anti-Venom Pen. On top of the autoinjector is a head resembling her own face. The autoinjector is voiced by Auliʻi Cravalho, who voices Moana in the Disney movie franchise of the same name.
@@ -16,17 +16,14 @@ All of that proves Gary De'Snake is a female character, and these traits build t
 
 As previously discussed, this algorithm derives from the reasoning behind why Gary De'Snake is actually a female character. The main parameters we discussed include her Anti-Venom Pen (female), her family legacy (matriarchal), her opposing family due to family feud (patriarchal), and the extent to which her voice is feminized/feminine (greater than 5 on a scale from 0 to 10). This algorithm applies these four parameters in a general setting, respectively, where:
 
-`a = whether the object possessed by the individual is male or female (0 for male, 1 for female)`
+```
+a = Gender of object posessed (0 = male, 1 for female)
+b = Gender of lineage (0 = male, 1 = female)
+c = Gender of opposing lineage (0 = male, 1 = female)
+d = Femininity of voice (1–5 = masculine, 6–10 = feminine, inf = unknown)
+```
 
-`b = whether the lineage is male or female (0 for male, 1 for female)`
-
-`c = whether the opposing lineage is male or female. (0 for male, 1 for female)`
-
-`d = extent to which the character's voice is feminized (0 - 5 for male, 6 - 10 for female)`
-
-`e = name of character (mostly used to print the function, but this is optional)`
-
-These four parameters are stored in an array `[a, b, c, d]` where the array represents the character. If any of these four parameters are not defined, we define them as `float('inf')` in Python, as when unknown, this leads to multiple possibilities, which are left unknown.
+These four parameters are stored in an array `[a, b, c, d]` where the array represents the character. If any of these four parameters are not defined, we define them as `float('inf')` in Python, as when unknown, this leads to multiple possibilities, which are left unknown. A fifth parameter `e` can also be added, though `e = Name of character` and is optional, mostly for printing purposes. If `e` is added, the array would instead be `[a, b, c, d, e]`.
 
 We define the `DetermineObject(character)` function, which determines whether the character has an object.
 
