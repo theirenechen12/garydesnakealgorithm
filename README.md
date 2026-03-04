@@ -1,4 +1,4 @@
-# Summary
+# Introduction
 The Gary De’Snake Algorithm (GDSA) is an algorithm that I myself developed during my free time as a master's student at California State University, Los Angeles. I developed this algorithm not only as someone passionate about applying computer science to the real world, but also as someone passionate about social dynamics in film and entertainment as a whole. This algorithm combines my personal interests with my programming skills to develop an algorithm that uses various factors to determine gender, survival, hiring decisions, financial or credit risk, health risk, and similar fields.
 
 # Background
@@ -141,7 +141,7 @@ Since all three deterministic factors indicate female, the algorithm classifies 
 
 # Time and Space Complexity
 
-The Gary De’Snake Algorithm operates in constant time, `O(1)`, for a single evaluation, as it processes a fixed number of predefined factors and applies a predetermined set of conditional decision rules. Since the number of factors and logical branches does not increase with input size, the runtime remains constant regardless of external scale. When applied to a dataset containing `n` independent instances, the total runtime becomes `O(n)` due to repeated constant-time evaluations. 
+This algorithm typically has a time complexity of `O(1)`, as it processes a fixed number of predefined factors and applies a predetermined set of conditional decision rules. Since the number of factors and logical branches does not increase with input size, the runtime remains constant regardless of external scale. When applied to a dataset containing `n` independent instances, the total time complexity becomes `O(n)` due to repeated constant-time evaluations. 
 
 The space complexity is also `O(1)` per evaluation, as the algorithm requires only a fixed amount of memory to store input parameters and intermediate decision variables. No additional data structures that grow with input size are used.
 
