@@ -1,5 +1,5 @@
 # Summary
-The Gary De’Snake Algorithm (GDSA) is an algorithm that I myself developed during my free time as a master's student at California State University, Los Angeles. I developed this algorithm not only as someone passionate about computer science wanting to apply it to the real world, but as someone passionate about social dynamics in film and entertainment as a whole. This algorithm combines my interests with the skills I learned in computer science to develop an algorithm that deterministically classifies the gender of an individual using various elements.
+The Gary De’Snake Algorithm (GDSA) is an algorithm that I myself developed during my free time as a master's student at California State University, Los Angeles. I developed this algorithm not only as someone passionate about computer science wanting to apply it to the real world, but as someone passionate about social dynamics in film and entertainment as a whole. This algorithm combines my interests with the skills I learned in computer science to develop an algorithm that deterministically classifies the gender of a character using various elements.
 
 # Origin
 This algorithm was first developed with one of my favorite characters, Gary De'Snake, in my mind and is named after her. Before getting into the algorithm, who is Gary De'Snake? Gary De'Snake is a female pit viper and the tritagonist of *Zootopia 2*, which was released on November 26, 2025. She is a 10-meter-long blue-scaled pit viper (*Trimeresurus insularis*), and in real life, these can be found in eastern Java and the Lesser Sunda Islands. While the pit viper is often seen as poisonous, her role as one of the heroines of *Zootopia 2* defies those stereotypes.
@@ -23,7 +23,7 @@ c = Gender of opposing lineage (0 = male, 1 = female)
 d = Femininity of voice (1–5 = masculine, 6–10 = feminine, inf = unknown)
 ```
 
-These four parameters are stored in an array `[a, b, c, d]` where the array represents the individual we want to determine the gender of. If any of these four parameters are not defined, we define them as `float('inf')` in Python (INF), as when unknown, this leads to multiple possibilities, which are left unknown. A fifth parameter `e` can also be added, though `e = Name of character` and is optional, mostly for printing purposes. If `e` is added, the array would instead be `[a, b, c, d, e]`.
+These four parameters are stored in an array `[a, b, c, d]` where the array represents the character we want to determine the gender of. If any of these four parameters are not defined, we define them as `float('inf')` in Python (INF), as when unknown, this leads to multiple possibilities, which are left unknown. A fifth parameter `e` can also be added, though `e = Name of character` and is optional, mostly for printing purposes. If `e` is added, the array would instead be `[a, b, c, d, e]`.
 
 We define the `DetermineLineage(character)` function that determines the character's lineage. We need this function to merge b and c into a single variable, lineage. 
 
