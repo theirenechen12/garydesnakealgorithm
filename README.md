@@ -131,9 +131,11 @@ The algorithm does not prioritize one factor over another. Instead, it evaluates
 If the `object_gender`, `lineage_gender`, and `voice_gender` are consistent (e.g., all indicate female), the gender is determined with the strongest justification (by object, lineage, and voice). If only one or two deterministic factors are available and they agree, gender is determined based on those available factors. If the factors conflict or are entirely unknown, the gender cannot be determined.
 
 For example, in Gary’s case:
+```
 	•	object_gender = 1 (female)
 	•	lineage_gender = 1 (female, from matriarchy vs patriarchy) \n
 	•	voice_gender = 6 (feminine range)
+```
 
 Since all three deterministic factors indicate female, the algorithm classifies Gary as female by object, lineage, and voice, which is true based on the evidence given above and her role in *Zootopia 2*.
 
