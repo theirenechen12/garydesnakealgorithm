@@ -13,19 +13,19 @@ e = Name of character (optional for output purposes)
 
 The algorithm is used to prove that Gary De'Snake is actually female rather than male. However, this is a general algorithm that can also be applied to other characters (test cases). 
 
-In addition, not only is this algorithm used to determine the gender of a character like in this example, but it can also be applied to real world scenarios such as:
+In addition, not only is this algorithm used to determine the gender of a character, like in this example, but it can also be applied to real-world scenarios such as:
 1. Hiring or selection decisions for a job or college
 2. Survival analysis for a major disaster
 3. Finance or credit risk
 4. Health risk prediction
 
-All of these scenarios involve making a decision based on multiple factors, some of which may be ambiguous or unknown, which is represented by float('inf'). The Gary De'Snake Algorithm provides a systematic way to make a decision based on these given factors.
+All of these scenarios involve making a decision based on multiple factors, some of which may be ambiguous or unknown, which is represented by float('inf'). The Gary De'Snake Algorithm provides a systematic approach for making decisions based on these factors.
 """
 
 """
-This function merges the factors of b (gender of lineage) and c (gender of opposing lineage) together to determine the gender of the lineage to determine if lineage is a deterministic factor in determining the gender of the character. 
-The returned value merges b and c together as one factor: gender of lineage.
-We need a separate function so we can get the gender of lineage as a single factor to use in the determine_gender function, which is the main function to determine the gender of the character based on the factors of object, lineage, and voice. 
+This function combines the factors b (gender of lineage) and c (gender of opposing lineage) to determine the lineage's gender and assess whether the lineage is a deterministic factor in the character's gender. 
+The returned value merges b and c into a single factor: lineage gender.
+We need a separate function to extract the lineage gender as a single factor for the determine_gender function, which is the main function for determining the character's gender based on the object, lineage, and voice factors. 
 """
 def determine_character_lineage(character):
     if character[1] == float('inf') and character[2] == float('inf'): #Genders of the lineage and opposing lineage unknown
@@ -55,10 +55,10 @@ lineage_gender = Gender of lineage
 voice_gender = Gender of voice
 name = Name of character (optional for output purposes)
 
-It uses the list to check the different cases to determine the gender of the character based on the factors of object, lineage, and voice. It also accounts for cases where some of the factors are ambiguous or unknown.
-It then prints the result of the character's gender based on the given factors.
+It uses the list to evaluate different cases and determine the character's gender based on the factors of object, lineage, and voice. It also accounts for cases where some of the factors are ambiguous or unknown.
+It then prints the character's gender based on the specified factors.
 
-There are 7 cases for male and 7 cases for female, as well as 1 case for unknown/conflicting, for a total of 15 cases to determine the gender of the character based on the factors of object, lineage, and voice. The cases are as follows:
+There are 7 cases for male, 7 for female, and 1 for unknown/conflicting, for a total of 15 cases used to determine the character's gender based on the factors of object, lineage, and voice. The cases are as follows:
 
 Object male, lineage male, voice masculine
 Object male, lineage male, voice unknown/conflicting
@@ -148,12 +148,12 @@ def determine_gender(character):
     
         
 #Test cases for the algorithm. All are Zootopia characters.
-gary = [1,1,0,6,"Gary De'Snake"] #Base case. We are trying to develop an algorithm that disproves Gary De'Snake being male. In the story, she has an anti-venom pen, which is a feminine object because it is voiced by Auliʻi Cravalho, a female voice actor, and she comes from a matriarchy and opposes a patriarchy, so her lineage is female. While she is voiced by Ke Huy Quan, who is male, he made her voice more feminine which surpasses the threshold 5 because of the pitch, so her voice is feminine. Therefore, by object, lineage, and voice, Gary De'Snake is female, disproving the claim that Gary De'Snake is male. This is the base case that the algorithm is trying to prove, developing the foundation for this algorithm.
+gary = [1,1,0,6,"Gary De'Snake"] #Base case. We are developing an algorithm to disprove Gary De'Snake's claim to be male. In the story, she has an anti-venom pen, which is a feminine object because it is voiced by Auliʻi Cravalho, a female voice actor, and because she comes from a matriarchy and opposes patriarchy, her lineage is female. Although she is voiced by Ke Huy Quan, who is male, he made her voice more feminine, which exceeds the 5 threshold due to the pitch, so her voice is feminine. Therefore, by object, lineage, and voice, Gary De'Snake is female, disproving the claim that Gary De'Snake is male. This is the base case the algorithm aims to prove, laying the foundation for the algorithm.
 judy = [1,float('inf'),float('inf'),10,"Judy Hopps"] #Judy Hopps has a carrot pen, which is a feminine object, but her lineage and opposing lineage are unknown, and her voice is feminine. Therefore, by object and voice, Judy Hopps is female.
-nick = [float('inf'),1,float('inf'),3,"Nick Wilde"] #Nick Wilde does not have a clear gendered object, his lineage and opposing lineage are unknown, but his voice is masculine. Therefore, by voice, Nick Wilde is male.
-pawbert = [float('inf'),0,1,4, "Pawbert Lynxley"] #Pawbert Lynxley has no object to determine gender, but his lineage is male and his opposing lineage is female, and his voice is masculine. Therefore, by lineage and voice, Pawbert Lynxley is male.
-pawbert_and_gary = [1,float('inf'),float('inf'),5, "Pawbert and Gary"] #Pawbert and Gary have a shared object, Gary's Anti-venom pen, which is feminine, but their lineage and opposing lineage are unknown because the two are opposites and their voice is the average of both, which is male because it equals 5. Therefore, the gender of Pawbert and Gary cannot be determined.
-nibbles = [float('inf'),float('inf'),float('inf'),6, "Nibbles Maplestick"]#Nibbles Maplestick has no object to determine gender, she has no lineage, but her voice is feminine. Therefore, by voice, Nibbles Maplestick is female. 
+nick = [float('inf'),1,float('inf'),3,"Nick Wilde"] #Nick Wilde does not have a clear gendered object; his lineage and opposing lineage are unknown, but his voice is masculine. Therefore, by voice, Nick Wilde is male.
+pawbert = [float('inf'),0,1,4, "Pawbert Lynxley"] #Pawbert Lynxley has no object to determine gender, but his lineage is male, and his opposing lineage is female, and his voice is masculine. Therefore, by lineage and voice, Pawbert Lynxley is male.
+pawbert_and_gary = [1,float('inf'),float('inf'),5, "Pawbert and Gary"] #Pawbert and Gary have a shared object, Gary's Anti-venom pen, which is feminine, but their lineage and opposing lineage are unknown because the two are opposites. Their voice is the average of both, which is male because it equals 5. Therefore, the gender of Pawbert and Gary cannot be determined.
+nibbles = [float('inf'),float('inf'),float('inf'),6, "Nibbles Maplestick"]#Nibbles Maplestick has no object to determine gender; she has no lineage, but her voice is feminine. Therefore, by voice, Nibbles Maplestick is female. 
 
 determine_gender(gary) #base case
 determine_gender(judy)
