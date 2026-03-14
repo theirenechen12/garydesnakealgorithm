@@ -1,20 +1,20 @@
 # Introduction
-The Gary De’Snake Algorithm (GDSA) is an algorithm that I myself developed during my spare time. I developed this algorithm not only as someone passionate about applying computer science to the real world, but also as someone passionate about social dynamics in film and entertainment as a whole. This algorithm combines my personal interests with my programming skills to develop an algorithm that uses various factors to determine gender, survival, hiring decisions, financial or credit risk, health risk, and similar fields.
+The Gary De’Snake Algorithm (GDSA) is an algorithm I developed in my spare time. I developed this algorithm not only as someone passionate about applying computer science to the real world, but also as someone passionate about social dynamics in film and entertainment as a whole. This algorithm combines my personal interests with my programming skills to develop a model that uses multiple factors to determine gender, survival, hiring decisions, financial or credit risk, health risk, and related areas.
 
 # Background
-This algorithm was first developed with one of my favorite characters, Gary De'Snake, in mind; it is even named after her, as she provides the foundation for this algorithm. Before getting into the algorithm, who is Gary De'Snake? Gary De'Snake is a female pit viper and the tritagonist of *Zootopia 2*, which premiered on November 26, 2025. She is a 10-meter-long blue-scaled pit viper (*Trimeresurus insularis*), and in real life, these can be found in eastern Java and the Lesser Sunda Islands. While the pit viper is often seen as poisonous, her role as one of the main heroines of *Zootopia 2*, alongside Judy Hopps and Nibbles Maplestick, defies those stereotypes.
+This algorithm was originally developed with one of my favorite characters, Gary De'Snake, in mind; it is even named after her, as she provides the foundation for this algorithm. Before getting into the algorithm, who is Gary De'Snake? Gary De'Snake is a female pit viper and the tritagonist of *Zootopia 2*, which premiered on November 26, 2025. She is a 10-meter-long blue-scaled pit viper (*Trimeresurus insularis*), and in real life, these can be found in eastern Java and the Lesser Sunda Islands. While the pit viper is often seen as poisonous, her role as one of the main heroines of *Zootopia 2*, alongside Judy Hopps and Nibbles Maplestick, defies those stereotypes.
 
-Ever since *Zootopia 2*'s release, Gary has been rising in popularity, especially in Asian countries like China and Vietnam. While many claim that Gary is a male character and she is referred to with male pronouns throughout the film, there is evidence that she is actually, in fact, a girl.
+Ever since the release of *Zootopia 2*, Gary has been gaining popularity, especially in Asian countries such as China and Vietnam. While many assume that Gary is male, as she is referred to with *he/him* pronouns throughout the film, mainly by the Lynxley family, as well as in official promotions, there are Easter eggs throughout the film which hint that she is actually, in fact, a girl, something Disney may announce eventually.
 1. Gary uses an autoinjector filled with antivenom in case her venomous fangs accidentally stab someone, known as the Anti-Venom Pen. On top of the autoinjector is a head resembling her own face. The autoinjector is voiced by Auliʻi Cravalho, who voices Moana in the Disney movie franchise of the same name.
 2. Gary comes from a matriarchal family, descended from Agnes De'Snake, her great-grandmother, who is revealed to be the true founder of Zootopia, whose credit was stolen by Ebenezer Lynxley.
-3. The De'Snake and Lynxley have an ongoing family feud, and because Ebenezer Lynxley successfully framed Agnes De'Snake for the murder of his tortoise maid, this led to the reputation of reptiles being destroyed and the families hating each other. Gary was the former "partner" turned arch-nemesis of Pawbert Lynxley, a male Canada lynx who is the great-grandson of Ebenezer Lynxley and the son of Milton Lynxley (the film's main antagonist). Pawbert smuggled Gary into Zootopia, manipulating her to help protect his great-grandfather's "legacy" in attempts to gain his father's love and belonging. Meanwhile, Gary's motive was to prove her great-grandmother was the true founder of Zootopia. While the De'Snake family is a matriarchy, the Lynxley family is a patriarchy, and as such, Gary has feminist symbols.
+3. The De'Snake and Lynxley have an ongoing family feud. Because Ebenezer Lynxley successfully framed Agnes De'Snake for the murder of his tortoise maid, this led to the reputation of reptiles being destroyed and the families hating each other. Gary was the former "partner" turned arch-nemesis of Pawbert Lynxley, a male Canada lynx who is the great-grandson of Ebenezer Lynxley and the son of Milton Lynxley (the film's main antagonist). Pawbert smuggled Gary into Zootopia, manipulating her to help protect his great-grandfather's "legacy" in attempts to gain his father's love and belonging. Meanwhile, Gary's motive was to prove her great-grandmother was the true founder of Zootopia. While the De'Snake family is a matriarchy, the Lynxley family is a patriarchy, and as such, Gary has feminist symbols.
 4. While Gary was voiced by Ke Huy Quan (Jonathan Ke Quan), a Vietnamese-American male actor whose accolades include an Academy Award, a Golden Globe Award, and a Saturn Award, in addition to a BAFTA nomination, Quan's voice as Gary is more childlike and feminine/neutral compared to his normal voice in other roles.
 
-All of that proves Gary De'Snake is a female character rather than a male, and these traits provide a solid foundation for this algorithm.
+All of that suggests that Gary De'Snake is a female character rather than male, and these traits provide a solid foundation for this algorithm.
 
 # Algorithm Implementation
 
-As previously discussed, this algorithm derives from the reasoning behind why Gary De'Snake is actually a female character. The main parameters we discussed include her Anti-Venom Pen (female), her family legacy (matriarchal), her opposing family due to family feud (patriarchal), and the extent to which her voice is feminized/feminine (greater than 5 on a scale from 0 to 10). This algorithm applies these four parameters in a general setting, respectively, where:
+As previously discussed, this algorithm is based on the reasoning behind why Gary De'Snake is actually female. The main parameters we discussed include her Anti-Venom Pen (female), her family legacy (matriarchal), her opposing family due to family feud (patriarchal), and the extent to which her voice is feminized/feminine (greater than 5 on a scale from 0 to 10). This algorithm applies these four parameters in a general setting, respectively, where:
 
 ```
 a = Gender of object posessed (0 = male, 1 for female)
@@ -23,9 +23,9 @@ c = Gender of opposing lineage (0 = male, 1 = female)
 d = Femininity of voice (1–5 = masculine, 6–10 = feminine, inf = unknown)
 ```
 
-These four parameters are stored in an array `[a, b, c, d]` where the array represents the character we want to determine the gender of. If any of these four parameters are not defined, we define them as `float('inf')` in Python (`INF`), as when unknown, this leads to multiple possibilities, which are left unknown. A fifth parameter `e` can also be added, though `e = Name of character` and is optional, mostly for output purposes. If `e` is added, the array would instead be `[a, b, c, d, e]`.
+These four parameters are stored in an array `[a, b, c, d]` where the array represents the character we want to determine the gender of. If any of these four parameters is not defined, we set it to `float('inf')` in Python (`INF`); when unknown, this leaves multiple possibilities. A fifth parameter `e` can also be added, though `e = Name of character` and is optional, mostly for output purposes. If `e` is added, the array would instead be `[a, b, c, d, e]`.
 
-We define the `DetermineLineage(character)` function that determines the character's lineage. We need this function to merge `b` and `c` into a single variable, lineage. 
+We define the `DetermineLineage(character)` function to determine a character's lineage. We need this function to merge `b` and `c` into a single variable, lineage. 
 
 ```
 FUNCTION DetermineCharacterLineage(character):
@@ -177,5 +177,4 @@ This algorithm is theoretical and requires several parameters to determine gende
    d = Biomarkers / clinical measurements (1–5 = low risk, 6–10 = high risk, inf = unknown)
    ```
 
-All of these applications can help predict, though it has limitations, since only four factors are taken into account. If a factor is missing, it may give an incorrect solution due to missing factors.
-
+All of these applications can help predict outcomes, though they have limitations because only four factors are considered. If a factor is missing, it may lead to an incorrect solution.
